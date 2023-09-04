@@ -18,7 +18,7 @@ public class InputController extends HttpServlet {
 
         // RequestDispatcher ? 서블릿에 전달된 요청을 다른 쪽으로 전달 혹은 배포하는 객체
         // InputController는 .../input.jsp라는 목적지로 가는 중간 경유지가 된다.
-        // WEB-INF 경로 ? 브라우저에서 직접 접근이 불가능한 경로 => 브라우저에서 jsp로 직접 호출 불가
+        // WEB-INF 경로 ? 브라우저에서 직접 접근이 불가능한 경로 => 브라우저에서 input.jsp로 직접 호출 불가 => /calc/input으로 호출 가능
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/calc/input.jsp");
 
         dispatcher.forward(req, resp);
