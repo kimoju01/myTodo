@@ -10,6 +10,7 @@ import java.io.IOException;
 
 @WebServlet(name = "todoRegisterController", urlPatterns = "/todo/register")
 public class TodoRegisterController extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("입력 화면 보기");
@@ -17,6 +18,7 @@ public class TodoRegisterController extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/todo/register.jsp");
 
         dispatcher.forward(req, resp);
+
     }
 
     @Override
@@ -24,5 +26,6 @@ public class TodoRegisterController extends HttpServlet {
         System.out.println("입력 처리 후 목록 페이지로 이동");
 
         resp.sendRedirect("/todo/list");
+
     }
 }
